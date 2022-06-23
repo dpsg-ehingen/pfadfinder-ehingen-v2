@@ -25,15 +25,16 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       - uses: php-actions/composer@v6
-      - name: Build
+      - name: installDeps
         run: |
               sudo apt-get install -y php php-cli nodejs npm
               npm install
-              npm run prod
+      - name: build
+        run: npm run prod
       - uses: actions/upload-artifact@master
         with: 
           name: testArtifact
-          path: build_production/
+          path: ./
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -46,4 +47,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
           branch: gh-pages 
-          folder: ./
+          folder: build_production/
