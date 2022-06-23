@@ -24,7 +24,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      - uses: php-actions/composer@v6
+      - uses: baschny/php-composer-action@v1
       - uses: bahmutov/npm-install@v1
       - name: build
         run: npm run prod
