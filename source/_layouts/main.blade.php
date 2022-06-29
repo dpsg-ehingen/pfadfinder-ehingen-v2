@@ -17,7 +17,7 @@
             </a>
             <div id="openMenu"><i class="gg-menu"></i></div>
             <nav id="menu">
-                <div id="closeMenu"><i class="gg-chevron-double-right"></i></div>
+                <span id="closeMenu"><i class="gg-chevron-double-right"></i></span>
                 <ul>
                     <li><a href="#">&Uuml;ber uns</a></li>
                     <li><a href="#">Kontankt</a></li>
